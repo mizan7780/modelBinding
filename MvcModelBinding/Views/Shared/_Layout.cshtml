@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <center>
+        <table style="width:850px;">
+            <tr>
+                <td colspan="2">
+                    <img src="~/Images/Capture1.JPG" style="width:850px; height:100px;" />
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top; width:200px;">
+                    @Html.ActionLink("Marks Entry Form", "InsertMarkInformation","Exam")<br /><br />
+                    @Html.ActionLink("Search Result Form", "SearchMarkInformation", "Exam")
+                </td>
+                <td style="vertical-align:top;">
+                    @RenderBody()
+                </td>
+            </tr>
+        </table>
+    </center>
+    
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

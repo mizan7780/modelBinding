@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "SearchMarkInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Search Information</legend>
+        <table>
+            <tr>
+                <td>Trainee ID :</td>
+                <td>@Html.TextBox("txtID")</td>
+                <td>Exam No :</td>
+                <td>@Html.TextBox("txtExamNo")</td>
+                <td><input type="submit" value="Search" /></td>
+            </tr>
+            <tr>
+                <td>Trainee ID :</td>
+                <td>@ViewBag.tid </td>
+            </tr>
+            <tr>
+                <td>Trainee Round :</td>
+                <td>@ViewBag.tround</td>
+            </tr>
+            <tr>
+                <td>Exam No :</td>
+                <td>@ViewBag.examNum</td>
+            </tr>
+            <tr>
+                <td>Evidence Mark :</td>
+                <td>@ViewBag.eviMark</td>
+            </tr>
+            <tr>
+                <td>Descriptive Mark :</td>
+                <td>@ViewBag.desMark</td>
+            </tr>
+            <tr>
+                <td>MCQ Mark :</td>
+                <td>@ViewBag.mcqMark</td>
+            </tr>
+            <tr>
+                <td>Exam Date :</td>
+                <td>@ViewBag.exmDate</td>
+            </tr>
+        </table>
+    </fieldset>
+}

@@ -1,0 +1,53 @@
+﻿@model MvcModelBinding.Models.MarksClass
+
+@{
+    ViewBag.Title = "InsertMarkInformation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>Marks Information Form</legend>
+        <table>
+            <tr>
+                <td>Trainee ID :</td>
+                <td>@Html.TextBoxFor(m=>m.traineeID)</td>
+            </tr>
+            <tr>
+                <td>Trainee Round :</td>
+                <td>@Html.TextBoxFor(m => m.traineeRound)</td>
+            </tr>
+            <tr>
+                <td>Exam No :</td>
+                <td>@Html.TextBoxFor(m => m.examNumber)</td>
+            </tr>
+            <tr>
+                <td>Evidence Mark :</td>
+                <td>@Html.TextBoxFor(m => m.evidenceMark)</td>
+            </tr>
+            <tr>
+                <td>Descriptive Mark :</td>
+                <td>@Html.TextBoxFor(m => m.descriptiveMark)</td>
+            </tr>
+            <tr>
+                <td>MCQ Mark :</td>
+                <td>@Html.TextBoxFor(m => m.mcqMark)</td>
+            </tr>
+            <tr>
+                <td>Exam Date :</td>
+                <td>@Html.TextBoxFor(m => m.examDate)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Insert" /></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    @ViewBag.msg
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+}
